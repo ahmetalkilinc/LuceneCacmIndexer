@@ -7,11 +7,11 @@ import java.nio.file.Paths;
 
 public class IndexerApp {
 
+
     private static String indexPath = "index";
     private static DocumentIndexer documentIndexer;
-    private static String filePath = "data/cacm/cacm.all";
-    private DocumentModel docModel;
-
+    private static String docsPath = null;
+    private static DocumentModel docModel;
 
     public IndexerApp() {
         System.out.println("Indexer");
@@ -28,13 +28,30 @@ public class IndexerApp {
      */
     public static void main(String[] args) throws IOException {
 
+        String usage = "[-docs DOCS_PATH] \n\n"
+                + "This indexes the documents in DOCS_PATH, creating a Lucene index"
+                + "in INDEX_PATH that can be searched with SearchFiles";
+
+
+        for (int i = 0; i < args.length; i++) {
+            if ("-docs".equals(args[i])) {
+                docsPath = args[i + 1];
+                i++;
+            }
+        }
+
+        if (docsPath == null) {
+            System.err.println("Usage: " + usage);
+            System.exit(1);
+        }
+
 
         IndexerApp indexerApp = new IndexerApp("1");
 
         try {
 
 
-            indexerApp.indexDocumentsFromFile(filePath);
+            indexerApp.indexDocumentsFromFile(docsPath);
 
         } catch (Exception e) {
             e.printStackTrace();

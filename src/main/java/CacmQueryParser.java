@@ -26,7 +26,9 @@ public class CacmQueryParser {
         char state = 0;
 
         BufferedReader breader = Files.newBufferedReader(Paths.get(queryFile), StandardCharsets.UTF_8);
+        int i=0;
         while ((lines = breader.readLine()) != null) {
+
             if ((lines = lines.trim()).isEmpty()) {
                 continue;
             }
@@ -34,8 +36,8 @@ public class CacmQueryParser {
                 state = lines.charAt(1);
                 if (state == Fields.ID) {
                     if (id.length() > 0 && queryText.length() > 0) {
-                        
-                        allQuery.put(id.replaceFirst("0*", ""), queryText);
+                        i++;
+                        allQuery.put(String.valueOf(i), queryText);
                         queryText = "";
                     }
                     

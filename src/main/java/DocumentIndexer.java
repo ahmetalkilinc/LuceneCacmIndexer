@@ -64,7 +64,7 @@ public class DocumentIndexer {
             System.out.println("Indexing to directory '" + indexPath + "'...");
 
             IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
-            iwc.setSimilarity(new BM25Similarity());
+            //iwc.setSimilarity(new BM25Similarity());
             iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
             writer = new IndexWriter(dir, iwc);
 

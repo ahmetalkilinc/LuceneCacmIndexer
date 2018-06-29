@@ -42,8 +42,7 @@ java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -docs data/cacm/cacm.all
 ## Searching
 
 ```shell
-java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD
-```
+java -cp target/LuceneCacmIndexer-1.0-SNAPSHOT.jar SearchApp -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD```
 
 
 ## Try out the Apps

@@ -13,9 +13,11 @@ Run Configuration Setups
 
 You must give the file path of the data set to be indexed as the program argument.
 
-```shell
--docs data/cacm/cacm.all
-```
+
+
+
+    -docs data/cacm/cacm.all
+
 
 
 ## SearchApp
@@ -24,19 +26,20 @@ You must give the file path of the index,query,result and specify the index fiel
 
 
 
-```shell
- -index index -field all -queries data/med/med.qry -paging 1000 -result result/med/lmd.res -sim LMD
-```
+     -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD
+
 
 
 ## JAR creation.
 `run mvn clean package` from the shell, executable jar will be in target/LuceneCacmIndexer-1.0-SNAPSHOT.jar
 
 ## Indexing
+
+```shell
 java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -docs data/cacm/cacm.all
+```
 
 ## Searching
-
 
 ```shell
 java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD

@@ -13,7 +13,9 @@ Run Configuration Setups
 
 You must give the file path of the data set to be indexed as the program argument.
 
+```shell
 -docs data/cacm/cacm.all
+```
 
 
 ## SearchApp

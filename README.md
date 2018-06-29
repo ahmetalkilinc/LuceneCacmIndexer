@@ -16,23 +16,23 @@ You must give the file path of the data set to be indexed as the program argumen
 -docs data/cacm/cacm.all
 
 
-#SearchApp
+# SearchApp
 
 You must give the file path of the index,query,result and specify the index field,paging number adn similarity model as the program argument.
 
 -index index -field all -queries data/med/med.qry -paging 1000 -result result/med/lmd.res -sim LMD
 
-#JAR creation.
+# JAR creation.
 run mvn clean package from the shell, executable jar will be in target/LuceneCacmIndexer-1.0-SNAPSHOT.jar
 
-#Indexing
+# Indexing
 java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -docs data/cacm/cacm.all
 
-#Searching
+# Searching
 java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD
 
 
-#Try out the Apps
+# Try out the Apps
 
 First, run the IndexerApp, which give params, will index the CACM collection. 
 

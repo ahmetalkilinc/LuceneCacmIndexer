@@ -36,6 +36,20 @@
                             </transformers>
                         </configuration>
                     </execution>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>SearchApp</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>

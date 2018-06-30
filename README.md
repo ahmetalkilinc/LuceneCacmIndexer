@@ -31,7 +31,7 @@ You must give the file path of the index,query,result and specify the index fiel
 
 
 ## JAR creation.
-`run mvn clean package` from the shell, executable jar will be in target/LuceneCacmIndexer-1.0-SNAPSHOT.jar
+run `mvn clean package` from the shell, executable jar will be in target/LuceneCacmIndexer-1.0-SNAPSHOT.jar
 
 ## IndexerApp
 

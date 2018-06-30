@@ -9,7 +9,7 @@ The code is based on examples developed by https://github.com/lucene4ir/lucene4i
 
 Run Configuration Setups
 
-## IndexerApp
+## Indexing
 
 You must give the file path of the data set to be indexed as the program argument.
 
@@ -20,9 +20,9 @@ You must give the file path of the data set to be indexed as the program argumen
 
 
 
-## SearchApp
+## Searching
 
-You must give the file path of the index,query,result and specify the index field,paging number adn similarity model as the program argument.
+You must give the file path of the index,query,result and specify the index field,paging number and similarity model as the program argument.
 
 
 
@@ -33,13 +33,13 @@ You must give the file path of the index,query,result and specify the index fiel
 ## JAR creation.
 `run mvn clean package` from the shell, executable jar will be in target/LuceneCacmIndexer-1.0-SNAPSHOT.jar
 
-## Indexing
+## IndexerApp
 
 ```shell
-java -jar target/LuceneCacmIndexer-1.0-SNAPSHOT.jar -docs data/cacm/cacm.all
+java -cp target/LuceneCacmIndexer-1.0-SNAPSHOT.jar IndexerApp -docs data/cacm/cacm.all
 ```
 
-## Searching
+## SearcherApp
 
 ```shell
 java -cp target/LuceneCacmIndexer-1.0-SNAPSHOT.jar SearchApp -index index -field all -queries data/cacm/query.text -paging 1000 -result result/cacm/lmd.res -sim LMD

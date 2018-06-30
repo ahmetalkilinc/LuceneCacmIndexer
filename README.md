@@ -48,7 +48,7 @@ java -cp target/LuceneCacmIndexer-1.0-SNAPSHOT.jar SearchApp -index index -field
 
 ## Try out the Apps
 
-First, run the IndexerApp, which give params, will index the CACM collection. 
+First, run the IndexerApp, which will index the CACM collection. 
 
 Then, you can run the SearchApp, which will take a list of queries, and run them against the index using LMD, and save the results to a result file (result/cacm/lmd.res).
 

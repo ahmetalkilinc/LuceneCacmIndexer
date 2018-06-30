@@ -208,7 +208,7 @@ public class SearchApp {
 
 
         Files.write(Paths.get(resultPath), lines);
-        System.out.println("Searching is finished.");
+        System.out.println("\n Searching is finished.");
     }
 
 

@@ -56,4 +56,4 @@ To evaluate the output you will need to download and install the trec_eval from 
 
 In data/cacm the list of documents relevant to each query is in the file, cacm.qrels, using trec_eval, we can measure the precision, recall, etc:
 
-trec_eval ~/LuceneCacmIndexer/data/cacm/cacm.qrels ~/LuceneCacmIndexer/data/cacm/lmd.res
+trec_eval ~/LuceneCacmIndexer/data/cacm/cacm.qrels ~/LuceneCacmIndexer/result/cacm/lmd.res
